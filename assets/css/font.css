@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'nicoca';
+	src: url(../nicoca/nicoca_v1.ttf) format('truetype');
+}
+
+h1, h2, h3, h4, h5, p, button span, input {
+	font-family: 'nicoca';
+  color: rgb(109, 82, 84);
+}
+
+.rounded-pill {
+  font-family: 'nicoca';
+}
+
+.display-2 {
+  color: rgb(200, 151, 156);
+}
