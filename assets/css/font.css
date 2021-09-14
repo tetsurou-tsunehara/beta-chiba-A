@@ -3,7 +3,7 @@
 	src: url(../nicoca/nicoca_v1.ttf) format('truetype');
 }
 
-h1, h2, h3, h4, h5, p, button span, input {
+h1, h2, h3, h4, h5, p, button, button span, input {
 	font-family: 'nicoca';
   color: rgb(109, 82, 84);
 }
@@ -14,4 +14,8 @@ h1, h2, h3, h4, h5, p, button span, input {
 
 .display-2 {
   color: rgb(200, 151, 156);
+}
+
+.checked {
+  background-color: #c3c6e4;
 }
