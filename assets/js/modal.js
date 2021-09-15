@@ -2,17 +2,17 @@
 
 const rightData = [
   ['つくえした', '9'],
-  ['1231', '2'],
+  ['1231', '2', '１２３１'],
   ['黄色い飾りのある部屋', '1'],
   ['ばつ', '8'],
-  ['まる', '7'],
+  ['まるの地図', '7'],
   ['こんぼう', '6'],
   ['おおかみ']
 ];
 
 $('#answer').on('show.bs.modal', (e) => {
   const num = Number($('main').data('num')) - 1;
-  if ($('input').val() == rightData[num][0] || $('.checked').text() == rightData[num][0]) {
+  if (($('input').val() || $('.checked').text()) == rightData[num][0] || (rightData[num][2] && $('input').val() == rightData[num][2])) {
     $('#result').text('正解！');
     if (num < 6) {
       $('#hint').text('紙切れが落ちていた…　犯人の手がかりになるかもしれない');
@@ -23,6 +23,10 @@ $('#answer').on('show.bs.modal', (e) => {
       <a href="end.html" class="text-reset"><h5 class="p-3">おおかみのところへ行こう！</h5></a>
     </div>`)
     }
+  } else {
+    $('#result').text('残念、違うようだ…　もう一度考え直そう！');
+    $('#hint').text('');
+    $('#hint-img').html('');
   }
 });
 
